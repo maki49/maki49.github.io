@@ -2,5 +2,7 @@
   url: /about/
 - title: Archive
   url: /archive/
-- title: Tags
-  url: /tags/
+- title: Categories
+  url: /categories/
+- title: Links
+  url: /links/
