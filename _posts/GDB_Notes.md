@@ -1,0 +1,19 @@
+## GDB Notes
+参考教程：https://mp.weixin.qq.com/s/w_Z2ftOnb4VtB4jUaMF0fw
+- 运行gdb：gdb 可执行文件，例如gdb /root/abacus-develop/build/abacus
+- 用gdb调试程序：r （run）
+- 断点：b  文件:行数，例如b /abacus/source/module_cell/module_symmetry/symmetry.cpp:1049
+- 查看所有断点：i b （info breakpoints）（可以看到每个断点的编号）
+- 删除断点：clear
+- 删除特定断点：delete 断点编号。可以一次操作多个，比如delete 1-4
+- 设置变量断点（当变量值改变时停下，显示下一行的内容）：watch 变量名
+- 查看变量的值
+  - 单次：p 变量名 或 print 变量名
+  - 每个断点都显示：display 变量名
+    - 查看显示列表： info display （可以看到每个显示项的编号）
+    - 取消显示：undisplay 编号
+- 查看数组的值（p/print/display）
+  - display *数组名@区间长度，例如 display *rotpos@12
+- 继续，往下运行一步：n （next）
+- 继续，直至下一个断点：c （continue）
+- 查看调用堆栈：bt  （backtrace），同where
