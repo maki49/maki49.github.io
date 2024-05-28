@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 remote_theme: ngzhio/jekyll-theme-hamilton
-title: 49th Island
+title: 49th LunaSea
 email: fortneu@stu.pku.edu.cn
 description: >- # this means to ignore newlines until "baseurl:"
   Miracles are everyday-life fluctuations.
