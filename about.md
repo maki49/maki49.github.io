@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 49 (Fortneu) is a code name of a world line observer, whose identity in the real world 
-is a graduate student of physics in [Mohan Chen's group](http://www2.coe.pku.edu.cn/subpaget.asp?id=660) at PKU.
+was a ~~unercover agent~~ graduate student in [Mohan Chen's group](http://www2.coe.pku.edu.cn/subpaget.asp?id=660) at PKU, studying physics and beyond-DFT methods and working happily with members in [Xinguo Ren's group](https://theory.iphy.ac.cn/252.html) at IOP-CAS.
 
 Why 49 (Fortneu)
 1. Birthday
