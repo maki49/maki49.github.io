@@ -17,7 +17,7 @@ remote_theme: ngzhio/jekyll-theme-hamilton
 title: 49th LunaSea
 email: fortneu@stu.pku.edu.cn
 description: >- # this means to ignore newlines until "baseurl:"
-  Miracles are everyday-life fluctuations.
+  Cats are dangerous. 自由而没有归宿。
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ""
@@ -30,6 +30,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-remote-theme
+  - jekyll-paginate
 
 skin: midnight
 avatar: avatar.jpg
@@ -46,3 +47,6 @@ music: true
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+paginate: 4 
+paginate_path: "/page:num/"

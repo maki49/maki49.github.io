@@ -1,0 +1,31 @@
+// Custom styles
+// 全局背景样式
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  // color: $text-color;
+  background-image: url('/images/chesed-lib.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.myhome{
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+  margin-top: $spacing-unit;
+  background-color: rgba(0, 0, 0, 0.5); // 半透明黑色背景
+}
+
+@media (max-width: 768px) {
+  .myhome {
+    background-attachment: scroll; /* 在移动设备上使用滚动而非固定背景 */
+  }
+}
