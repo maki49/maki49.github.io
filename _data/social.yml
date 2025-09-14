@@ -1,3 +1,9 @@
 - title: GitHub
   url: https://github.com/maki49/
-  icon: fab fa-github
+  icon: fa-brands fa-github
+- title: Twitter
+  url: https://x.com/deepdarklunasea
+  icon: fa-brands fa-x-twitter
+- title: Google Scholar
+  url: https://scholar.google.com/citations?user=btNyDD4AAAAJ&hl=en
+  icon: fa-brands fa-google-scholar

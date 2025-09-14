@@ -87,7 +87,7 @@ layout: default
   </footer>
 
   {%- if site.comments.provider -%}
-    {% include comments.html %}
+    {% include comments.html %}  <!-- load html file from _includes -->
   {%- elsif page.comments != false and jekyll.environment == "production" and site.disqus -%}
     {% include disqus.html %}
   {%- endif -%}
