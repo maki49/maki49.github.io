@@ -1,0 +1,40 @@
+{% assign provider = site.comments.provider | default:"disqus" %}
+{% if provider == "utterances" %}
+  {% assign utterances = site.utterances %}
+  {% if utterances.repo %}
+    <div class="comments-section">
+      <hr>
+      <h3>Comments</h3>
+      <script src="https://utteranc.es/client.js"
+              repo="{{ utterances.repo }}"
+              issue-term="{{ utterances.issue-term }}"
+              label="{{ utterances.label }}"
+              theme="{{ utterances.theme }}"
+              crossorigin="anonymous"
+              async>
+      </script>
+    </div>
+  {% endif %}
+{% elsif provider == "disqus" %}
+  {% assign disqus = site.disqus | default:site.disqus_shortname %}
+  {% if disqus %}
+    <div class="comments-section">
+      <hr>
+      <h3>Comments</h3>
+      <div id="disqus_thread"></div>
+      <script>
+        var disqus_config = function () {
+          this.page.url = "{{ page.url | absolute_url }}";
+          this.page.identifier = "{{ page.url | absolute_url }}";
+        };
+        (function() {
+          var d = document, s = d.createElement('script');
+          s.src = 'https://{{ disqus }}.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  {% endif %}
+{% endif %}

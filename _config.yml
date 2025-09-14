@@ -50,3 +50,13 @@ music: true
 
 paginate: 4 
 paginate_path: "/page:num/"
+
+# Comments
+comments:
+  provider: utterances
+
+utterances:
+  repo: "maki49/maki49.github.io"
+  issue-term: "pathname"
+  label: "💬comment"
+  theme: "icy-dark"  # more beautiful than dark-blue I think
