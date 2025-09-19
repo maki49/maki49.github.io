@@ -24,6 +24,10 @@ body {
   background-color: rgba(0, 0, 0, 0.5); // 半透明黑色背景
 }
 
+.articleBody{
+  background-color: rgba(0, 0, 0, 0.5); // 半透明黑色背景
+}
+
 @media (max-width: 768px) {
   .myhome {
     background-attachment: scroll; /* 在移动设备上使用滚动而非固定背景 */
