@@ -14,11 +14,11 @@ chatgpt认为长期确实不可持续，除非算力成本下降（更高效模�
 但把思路逆转过来，这样不失为一种好事：人类的技术能力和逻辑能力依然至关重要，不必太过担心迅速被AI取代。
 
 简要回顾被vibe coding冲击的这两周：
-从$3订阅Trae的首月优惠开始，借助它的builder（一个自动分析需求，拆解成可执行的步骤并选用工具逐个实施的AI agent）配合chat，先后：实现了gth2upf的一个新功能，修改了blog的风格（自定义首页背景图、favicon，分页和评论功能），结合[Bohrium平台课程](https://www.bohrium.com/courses/5920545182?tab=courses)和仓库（[AI4S-agent-tools](https://github.com/deepmodeling/AI4S-agent-tools)和[ABACUS-agent-tools](https://github.com/deepmodeling/ABACUS-agent-tools)）在自己机器上成功跑通了基于MCP tools的AI agents并大致摸清了这类项目的整体架构和各个概念之间的关系，最后丢给builder一个简要的设计文档让它帮我从零写一个项目，结果到目前还没调试通。
+从$3订阅Trae的首月优惠开始，借助它的builder（一个自动分析需求，拆解成可执行的步骤并选用工具逐个实施的AI agent）配合chat，先后：实现了gth2upf的一个新功能，修改了blog的风格（自定义首页背景图、favicon，分页和评论功能），结合[Bohrium平台课程](https://www.bohrium.com/courses/5920545182?tab=courses)和仓库（[AI4S-agent-tools](https://github.com/deepmodeling/AI4S-agent-tools)和[ABACUS-agent-tools](https://github.com/deepmodeling/ABACUS-agent-tools)）在自己机器上成功跑通了基于MCP tools的AI agents，并大致摸清了这类项目的整体架构和各个概念之间的关系，最后丢给builder一个简要的设计文档让它帮我从零写一个项目，不过到目前为止还没调试通。
 
-不难发现，AI的核心作用在于提供高度相关的信息以打开思路，而这实际上并不需要vibe，chatgpt/copilot就足够完成以上任务。Agent相比LLM本身多出的是“问题拆解与工具选择”智能，但我对这种智能的个人体感是，（至少到目前为止）它无法比肩人类的逻辑推理能力。
+不难发现，AI的核心作用在于提供高度相关的信息以打开思路，而这实际上并不需要vibe，chatgpt/copilot就足够完成以上任务。Agent相比LLM本身多出的是“问题拆解与工具选择”的智能，但我对这种智能的个人体感是，（至少在coding这一领域，到目前为止）它无法比肩人类的逻辑推理能力。
 
-举一个昨天尝试[ABACUS-agent-tools](https://github.com/deepmodeling/ABACUS-agent-tools)遇到的实际案例：
+举一个昨天尝试[ABACUS-agent-tools](https://github.com/deepmodeling/ABACUS-agen-tools)遇到的实际案例：
 
 首先这件事AI帮助最大的一点是，它很快从一大堆报错信息中定位到关键：
 ```
@@ -28,7 +28,8 @@ enum.1: Input should be a valid string [type=string_type, input_value=2, input_t
 enum.2: Input should be a valid string [type=string_type, input_value=4, input_type=int]
 ```
 我定睛一看，取值1|2|4，这不就是nspin吗？然而AI想当然地判断是依赖库的问题，甚至都没想到在代码里将这三个数组合搜索一下。（不排除是因为订阅模式下厂家为了降低成本，优先自动选择较小的模型）
-我找到nspin那一行提醒它，它说Literal可能在有些老版本的库中不支持，建议这样改来验证问题出在这一行：
+
+我找到nspin那一行提醒它，它说Literal可能在有些老版本的库中不支持，建议这样改来验证问题是否出在这一行：
 ```python
     nspin: Literal[1, 2, 4] = 1,    #error
     nspin: int = 1,    # suggest change to debug
@@ -42,7 +43,7 @@ enum.2: Input should be a valid string [type=string_type, input_value=4, input_t
     nspin: Literal[1, 2, 4] = 1,    #error
     nspin: Literal["1", "2", "4"] = "1",    #ok
 ```
-别人的机器上第一种写法也是没问题的，所以确实可能和依赖库版本有关，那么AI的判断也没错。但这件事让我更加坚定地认为，**人类的思维能力依然至关重要，且短期内不可替代**。
+别人的机器上第一种写法也是没问题的，所以可能确实和依赖库版本有关，AI的判断也没错。但这件事让我更加坚定地认为，**人类的思维能力依然至关重要，且短期内不可替代**。
 
 LLM兴起时，有人意识到“提问能力变得很重要”，而如何提问的背后正是人类如何用逻辑对知识/问题进行分析与整合，从而准确找出疑点并描述清楚的过程。
 
