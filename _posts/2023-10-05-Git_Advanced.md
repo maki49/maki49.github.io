@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Git Advanced
-categories: tools
+categories: tech
 ---
 
 ### rebase family
