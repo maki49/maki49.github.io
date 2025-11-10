@@ -10,7 +10,7 @@ body {
   // color: $text-color;
   background-image:     
   linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), // 黑色半透明遮罩
-  url('/images/chesed-lib.jpg');
+  url('/images/chesed-lib.png');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -24,7 +24,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/images/chesed-lib.jpg');
+  background-image: url('/images/chesed-lib.png');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
