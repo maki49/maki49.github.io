@@ -17,11 +17,13 @@ IMS registration status: Unegistered
 Voice over LTE: Unavailable
 ```
 
-后来用`adb shell getprop ro.boot.hardware.sku` 返回`GK2MP`，ChatGPT据此判断我的 Pixel 10 固件是美版。美版固件默认屏蔽中国运营商的 IMS 配置，因此会导致 **IMS 未注册、VoLTE 不可用**，且无法通过ADB强制激活：
+后来ChatGPT发现我的系统是美版硬件，美版会默认屏蔽中国运营商的 IMS 配置，因此会导致 **IMS 未注册、VoLTE 不可用**，且无法通过ADB强制激活：
 
 ```Shell
 frankel:/ setprop persist.dbg.volte_avail_ovr 1
-Failed to set property 'persist.dbg.volte_avail_ovr' to '1'. See dmesg for error reason. 1|frankel:/ $ dmesg dmesg: klogctl: Permission denied
+Failed to set property 'persist.dbg.volte_avail_ovr' to '1'. See dmesg for error reason. 
+1|frankel:/ $ dmesg 
+dmesg: klogctl: Permission denied
 ```
 
 ChatGPT说，这是因为Android 15以后的系统安全策略不允许非root用户修改VoLTE/VoWiFi属性。（也许更早版本的Pixel可以这样用ADB激活VoLTE？）
@@ -45,6 +47,7 @@ ChatGPT说，这是因为Android 15以后的系统安全策略不允许非root�
 > ```Shell
 > adb shell getprop ro.boot.hardware.sku
 > ```
+> 返回`GK2MP`，ChatGPT据此判断我的 Pixel 10 是美版硬件。
 
 ### 刷机步骤
 
