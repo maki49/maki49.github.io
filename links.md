@@ -3,6 +3,12 @@ layout: page
 title: Useful Links
 permalink: /links/
 ---
+#### Friends
+- [minyez](https://blog.minyez.me/)
+- [Fisherd](https://fisherd.github.io/)
+- [Flying-dragon-boxing](https://rhx0820.xyz/)
+- [NekoParty(CRITSIUM)](https://nekoparty.online/)
+
 #### Physics & Chemistry
 - [Prefetch](https://prefetch.eu/)
 - [量子化学中的基组解释](https://molecularmodelingbasics.blogspot.com/2015/06/a-brief-introduction-to-basis-sets.html)
