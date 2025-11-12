@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Useful Links
+title: Links
 permalink: /links/
 ---
 #### Friends
 - [minyez](https://blog.minyez.me/)
 - [Fisherd](https://fisherd.github.io/)
 - [Flying-dragon-boxing](https://rhx0820.xyz/)
-- [NekoParty(CRITSIUM)](https://nekoparty.online/)
+- [NekoParty(Critsium)](https://nekoparty.online/)
 
 #### Physics & Chemistry
 - [Prefetch](https://prefetch.eu/)
