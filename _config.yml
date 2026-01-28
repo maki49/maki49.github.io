@@ -63,3 +63,6 @@ utterances:
   issue-term: "pathname"
   label: "💬comment"
   theme: "icy-dark"  # more beautiful than dark-blue I think
+
+
+timezone: Asia/Shanghai
