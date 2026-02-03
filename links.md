@@ -5,7 +5,7 @@ permalink: /links/
 ---
 #### Friends
 - [minyez](https://blog.minyez.me/)
-- [Fisherd](https://fisherd.github.io/)
+- [Fisherd](https://fisherd99.github.io/)
 - [Flying-dragon-boxing](https://rhx0820.xyz/)
 - [NekoParty(Critsium)](https://nekoparty.online/)
 
