@@ -26,6 +26,7 @@ layout: default
             {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
       {%- endif -%}
+      • <span id="word-count">--</span> words • <span id="reading-time">--</span> min read
       <span id="busuanzi_container_page_pv" style="display:none;">
         • <span id="busuanzi_value_page_pv"></span> visits
       </span>
@@ -36,6 +37,23 @@ layout: default
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
+
+  <script>
+    (function () {
+      var content = document.querySelector('.post-content');
+      if (!content) return;
+      var text = content.innerText || '';
+      var cjk = (text.match(/[\u4e00-\u9fff]/g) || []).length;
+      var words = (text.replace(/[\u4e00-\u9fff]/g, ' ')
+        .match(/\b[A-Za-z0-9]+(?:['-][A-Za-z0-9]+)?\b/g) || []).length;
+      var totalWords = cjk + words;
+      var readingTime = Math.max(1, Math.ceil(totalWords / 500));
+      var wordEl = document.getElementById('word-count');
+      var timeEl = document.getElementById('reading-time');
+      if (wordEl) wordEl.textContent = totalWords;
+      if (timeEl) timeEl.textContent = readingTime;
+    })();
+  </script>
 
   <footer class="post-footer">
     {% if page.categories.size > 0 %}
