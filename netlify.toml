@@ -1,0 +1,10 @@
+[build]
+  command = "bundle install && bundle exec jekyll build"
+  publish = "_site"
+
+[build.environment]
+  RUBY_VERSION = "3.2.2" # 建议指定一个稳定的 Ruby 版本
+  JEKYLL_ENV = "production"
+
+[[plugins]]
+  package = "netlify-plugin-jekyll" # Netlify 官方推荐的 Jekyll 插件，可以加速缓存

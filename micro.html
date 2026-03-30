@@ -1,0 +1,28 @@
+---
+layout: page
+title: Microblog
+permalink: /micro/
+---
+
+<div class="micro-timeline">
+  {% assign sorted_micro = site.micro | sort: 'date' | reverse %}
+  {% for entry in sorted_micro %}
+  <div class="micro-entry" style="margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+    <div class="micro-date" style="font-size: 0.9em; color: #888;">
+      {{ entry.date | date: "%Y-%m-%d %H:%M" }}
+    </div>
+    <div class="micro-content" style="margin-top: 10px;">
+      {{ entry.content }}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<style>
+.micro-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin: 10px 0;
+}
+</style>

@@ -26,6 +26,12 @@ github_username:  maki49
 author: Fortneu49
 copyright: " <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>"
 
+# Collections
+collections:
+  micro:
+    output: true
+    permalink: /micro/:path/
+
 # Build settings
 
 plugins:

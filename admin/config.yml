@@ -1,0 +1,33 @@
+backend:
+  name: github
+  repo: maki49/maki49.github.io
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+  site_id: 47f6a372-376f-482b-ba95-0ad299e9ed8a # <--- 在这里粘贴你刚才复制的 Site ID
+
+media_folder: "images/uploads" # where images will be stored
+public_folder: "/images/uploads" # how images are referenced in URLs
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "micro"
+    label: "Microblog"
+    folder: "_micro"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "micro" }
+      - { label: "Title", name: "title", widget: "string", required: false }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
