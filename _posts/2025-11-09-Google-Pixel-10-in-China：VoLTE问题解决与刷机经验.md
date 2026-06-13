@@ -1,7 +1,7 @@
 ---
 layout: post
 toc: true
-categories: tech life
+categories: tech
 title: "Google Pixel 10 in China：VoLTE问题解决与刷机经验"
 ---
 <!-- ## Google Pixel 10 in China: VoLTE问题解决和刷机经验 -->
